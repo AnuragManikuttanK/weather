@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="one">
+            <section class="two">
+        <img class="weather-icon" src="photos/partly-cloudy.png" alt="Partly Cloudy">
+        <h1>Weather Dashboard</h1>
+        </section>
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" >
+            <button>Search</button>
+        </div>
+        <div class="theme">
+            <span id="light">☀️</span>
+            <span id="dark">🌙</span>
+        </div>
+       </div>
+       <div class="dashboard">
+        <section class="weather-card">
+            <h3 id="cityName">Search a City</h3>
+            <div class="temperature">
+                <span id="weatherIcon">🌤️</span>
+                <span id="temperature">--°C</span>
+            </div>
+            <p id="description">Weather information will appear here</p>
+            <div class="weather-details">
+                <div>
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div>
+                    <span>💨</span>
+                    <p>Wind</p>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+                <div>
+                    <span>🧭</span>
+                    <p>Pressure</p>
+                    <strong>-- hPa</strong>
+                </div>
+            </div>
+
+            <button id="favoriteBtn" class="favorite-btn">
+                ⭐ Add to Favorites
+            </button>
+        </section>
+        <h2>5-day Forecast</h2>
+        <div id="forecast" class="fore">
+        <div class="forecast-card">
+            <h3>Day 1</h3>
+            <span>🌤️</span>
+            <p>--°C</p>
+        </div>
+
+        <div class="forecast-card">
+            <h3>Day 2</h3>
+            <span>☀️</span>
+            <p>--°C</p>
+        </div>
+
+        <div class="forecast-card">
+            <h3>Day 3</h3>
+            <span>🌧️</span>
+            <p>--°C</p>
+        </div>
+
+        <div class="forecast-card">
+            <h3>Day 4</h3>
+            <span>☁️</span>
+            <p>--°C</p>
+        </div>
+        <div class="forecast-card">
+            <h3>Day 5</h3>
+            <span>☀️</span>
+            <p>--°C</p>
+            </div>
+        </div>
+        </div>
+        <section id="favorites" class="favo-sect">
+            <h2>⭐ Favorites</h2>
+            <div id="favolist" class="favo-list">
+                <p class="no-favo">No favorite cities yet</p>
+            </div>
+        </section>
+        <div id="loading" class="load">
+            Loading...
+        </div>
+       
+    </div>
+<script src="index.js"></script>
+</body>
+</html>

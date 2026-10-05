@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("photos/Misty Mountain Valley at Golden Hour.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0,0,0,0.15);
+}
+
+.one{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+}
+.two{
+    display: flex;
+    gap: 20px;
+    align-items:center;
+    flex: 1;
+}
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.search-box {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    background: white;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    font-size: 20px;
+}
+
+.search-box button {
+    width: 170px;
+    border: none;
+    background: #4f35e8;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #3824c7;
+}
+
+.theme{
+     width: 145px;
+    height: 58px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(5, 45, 90, 0.8);
+    border-radius: 35px;
+    font-size: 25px;
+}
+.dashboard{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    color: white;
+}
+.dashboard h2{
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0 20px;
+}
+.weather-card{
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.weather-card h3{
+    font-size: 30px;
+}
+.temperature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+#weatherIcon{
+    font-size: 60px;
+}
+#temperature{
+    font-size: 50px;
+    font-weight: bold;
+}
+#description{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.weather-details {
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
+}
+.weather-details div{
+    text-align: center;
+}
+.weather-details span{
+    font-size: 25px;
+}
+.weather-details p{
+    margin-top: 5px;
+}
+.weather-details strong{
+    font-size: 18px;
+}
+.favorite-btn{
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #4f35e8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.favorite-btn:hover{
+    background: #3824c7;
+}
+
+
+.fore{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.forecast-card{
+    width: 170px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+}
+.forecast-card span{
+    display: block;
+    font-size: 40px;
+    margin: 15px 0;
+}
+.forecast-card p{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.favo-sect{
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    color: white;
+}
+.favo-sect h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.favo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.favorite-city{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 12px;
+}
+.favorite-city span{
+    font-size: 18px;
+    font-weight: bold;
+}
+.favorite-city button{
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.no-favo{
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 15px;
+}
+
+.load{
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    .one {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .two {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .weather-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .search-box {
+        width: 100%;
+        height: 50px;
+    }
+
+    .search-box input {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .search-box button {
+        width: 100px;
+        font-size: 15px;
+    }
+
+    .theme {
+        width: 120px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .dashboard {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .weather-card {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .weather-card h3 {
+        font-size: 24px;
+    }
+
+    #weatherIcon {
+        font-size: 45px;
+    }
+
+    #temperature {
+        font-size: 40px;
+    }
+
+    #description {
+        font-size: 17px;
+    }
+
+    .weather-details {
+        gap: 10px;
+    }
+
+    .weather-details span {
+        font-size: 20px;
+    }
+
+    .weather-details p {
+        font-size: 14px;
+    }
+
+    .weather-details strong {
+        font-size: 15px;
+    }
+
+    .dashboard h2 {
+        font-size: 24px;
+    }
+
+    .fore {
+        gap: 10px;
+    }
+
+    .forecast-card {
+        width: 140px;
+        padding: 15px;
+    }
+
+    .forecast-card span {
+        font-size: 32px;
+    }
+
+    .forecast-card p {
+        font-size: 18px;
+    }
+
+    .favo-sect {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .favorite-city {
+        padding: 12px 15px;
+    }
+
+    .favorite-city span {
+        font-size: 16px;
+    }
+
+    .favorite-city button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
